@@ -311,7 +311,7 @@
 
   .places__view-all:hover,
   .places__view-all:focus {
-    opacity: .65;
+    opacity: .75;
   }
 
 
