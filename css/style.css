@@ -454,6 +454,10 @@ padding-left: 47px;
   grid-gap: 57px;
 }
 
+.top__card {
+  display: flex;
+  flex-direction: column;
+}
 .top__card-pic {
   position: relative;
   margin-bottom: 45px;
@@ -506,11 +510,13 @@ padding-left: 47px;
 }
 
 .top__card-more {
+  width: 118px; /* по идее надо оборачивать в контейнер */
   padding: 12px 19px;
   background-color: #006DFE;
   text-decoration: none;
   color: #FFFFFF;
   font-size: 16px;
+  margin: auto 0 0 0;
 }
 
 .top__card-more:hover,
