@@ -697,6 +697,9 @@ padding-left: 47px;
 }
 
 @media screen and (max-width: 767px) {
+  .section-title::after {
+    width: 78px;
+  }
   .header__burger {
     display: block;
   }
@@ -774,12 +777,28 @@ padding-left: 47px;
     width: 100%;
     margin-right: 0;
     padding-bottom: 12px;
+    background: transparent url(../img/svg/circle-ico.svg) no-repeat left 2px;
   }
   .search-form__field::placeholder {
     font-size: 16px;
   }
+  .search-form__submit {
+    width: 100%;
+  }
+  .benefits, .benefits__card {
+    margin-bottom: 26px;
+  }
   .benefits__card {
     grid-column: span 3;
+  }
+  .benefits__card-pic {
+    margin-bottom: 20px;
+  }
+  .benefits__card-title {
+    margin-bottom: 12px;
+  }
+  .benefits__card-desc {
+    margin-bottom: 20px;
   }
 
 }
