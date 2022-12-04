@@ -33,9 +33,9 @@
     box-sizing: inherit;
   }
 
-  * {
+  /* * {
     outline: 1px solid greenyellow !important;
-  }
+  } */
 
   body {
     font-family: 'Lato';
@@ -44,7 +44,13 @@
     line-height: 1.2;
     font-weight: normal;
     color: #102746;
+    /* overflow-x:hidden; */
+    /* overflow-y:auto; */
   }
+
+  /* body.fixed {
+    overflow:hidden;
+  } */
 
   img {
     max-width: 100%;
@@ -581,9 +587,9 @@ padding-left: 47px;
   position: relative;
 }
 
-
+/* адаптивное видео, под любой экран */
 .video__item {
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* padding-top расчитывается от ширины экрана, ставим нужную пропорцию в %*/
 }
 
 .video__element {
