@@ -31,6 +31,51 @@
     })
 }());
 
+// Scroll to anchors
+(function () {
+
+    const smoothScroll = function (targetEl, duration) {
+        // если header не следует со скролом экрана, то надо удалить след.строку и строку, где используется переменная
+        const headerElHeight =  document.querySelector('.header').clientHeight;
+        let target = document.querySelector(targetEl);
+        let targetPosition = target.getBoundingClientRect().top - headerElHeight;
+        let startPosition = window.pageYOffset;
+        let startTime = null;
+
+        // функция-обработчки скрола(бывают еще ease in, out, liner)
+        const ease = function(t,b,c,d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        };
+
+        // функция анимации скрола
+        const animation = function(currentTime){
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, targetPosition, duration);
+            window.scrollTo(0,run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        };
+        requestAnimationFrame(animation);
+
+    };
+
+    //обработчик событий, чтобы по клику срабатывала smoothScroll
+    const scrollTo = function () {
+        const links = document.querySelectorAll('.js-scroll');
+        links.forEach(each => {
+            each.addEventListener('click', function () {
+                const currentTarget = this.getAttribute('href');
+                smoothScroll(currentTarget, 1000);
+            });
+        });
+    };
+    scrollTo();
+}());
+
+
 // $('.menu').on('click',function() {
 //     $('body').toggleClass('fixed');
 //   });
