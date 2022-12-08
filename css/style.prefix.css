@@ -339,7 +339,7 @@
     display: grid;
     -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 55px;
+    column-gap: 55px;
     padding: 0 100px;
   }
 
@@ -439,7 +439,7 @@
     display: grid;
     -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-gap: 10px; */
+    /* gap: 10px; */
     -webkit-column-gap: 10px;
        -moz-column-gap: 10px;
             column-gap: 10px;
@@ -529,7 +529,7 @@
   display: grid;
   -ms-grid-columns: 1fr 108px 1fr;
   grid-template-columns: repeat(2, 1fr);
-  /* grid-gap: 0 108px; */
+  /* gap: 0 108px; */
   grid-column-gap: 108px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -587,7 +587,7 @@ padding-left: 47px;
   display: grid;
   -ms-grid-columns: 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr 57px 1fr;
   grid-template-columns: repeat(6, 1fr);
-  /* grid-gap: 57px; */
+  /* gap: 57px; */
   -webkit-column-gap: 57px;
      -moz-column-gap: 57px;
           column-gap: 57px;
@@ -775,7 +775,7 @@ https://www.youtube.com/watch?v=L5_vyBTKxso&list=PL5_s7xdj2Vsw-bCx5nOZJMFIiHwRgo
   }
   .benefits__cards {
     padding: 0 15px;
-    grid-column-gap: 35px;
+    column-gap: 35px;
   }
   .benefits__title {
     padding: 55px 15px;
