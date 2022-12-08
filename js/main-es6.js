@@ -23,13 +23,33 @@
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header__nav');
     const menuCloseItem = document.querySelector('.header__nav-close');
+    const menuLinks = document.querySelectorAll('.header__link')
     burgerItem.addEventListener('click', () => {
         menu.classList.add('header__nav_active');
-    } );
+    });
     menuCloseItem.addEventListener('click', () => {
         menu.classList.remove('header__nav_active');
-    })
+    });
+    if (window.innerWidth <= 767 ) {
+        for ( let i = 0 ; i < menuLinks.length; i += 1 ) {
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header__nav_active');
+            });
+        }
+    }
 }());
+// при открытом бургер меню, клик по ссылке должен должен так же закрывать это меню
+// const menuLinks = document.querySelectorAll('.header__link')  // делаем переменную ссылок
+/*
+    if (window.innerWidth <= 767 ) {  // бургер вызывается когда экран <= 767
+        for ( let i = 0 ; i < menuLinks.length; i += 1 ) {  // пробегаемся по коллекции ссылок
+// каждому элементу ссылок нужно присвоить обработчик событий menuLinks[i]
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header__nav_active');
+        });
+    }
+*/
+
 
 // Scroll to anchors
 (function () {
@@ -75,7 +95,3 @@
     scrollTo();
 }());
 
-
-// $('.menu').on('click',function() {
-//     $('body').toggleClass('fixed');
-//   });
