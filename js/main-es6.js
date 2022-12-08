@@ -33,7 +33,7 @@
     if (window.innerWidth <= 767 ) {
         for ( let i = 0 ; i < menuLinks.length; i += 1 ) {
             menuLinks[i].addEventListener('click', () => {
-
+                menu.classList.remove('header__nav_active');
             });
         }
     }
@@ -43,9 +43,10 @@
 /*
     if (window.innerWidth <= 767 ) {  // бургер вызывается когда экран <= 767
         for ( let i = 0 ; i < menuLinks.length; i += 1 ) {  // пробегаемся по коллекции ссылок
-// каждому элементу ссылок нужно присвоить обработчик событий
-            menuLinks[i]
-        }
+// каждому элементу ссылок нужно присвоить обработчик событий menuLinks[i]
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header__nav_active');
+        });
     }
 */
 
